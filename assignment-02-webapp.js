@@ -5,13 +5,14 @@ const port = 3000;
 
 // Setup Handlebars
 const handlebars = require("express-handlebars");
+
 app.engine("handlebars", handlebars({
     defaultLayout: "main"
 }));
 app.set("view engine", "handlebars");
 
 // Setup body-parser
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
 // Make the "public" folder available statically
 app.use(express.static("public"));
@@ -22,13 +23,18 @@ app.get("/", function (req, res) {
 });
 
 // TODO Add the web-service.js router here.
+const webService = require("./routes/web-service");
+app.use(webService);
 
 // TODO Add your Task Two router here.
+
+const adminService = require("./routes/admin");
+app.use(adminService);
 
 
 // Start the server running. Once the server is running, the given function will be called, which will
 // log a simple message to the server console. Any console.log() statements in your node.js code
 // can be seen in the terminal window used to run the server.
-app.listen(port, function() {
+app.listen(port, function () {
     console.log(`Example app listening on port ${port}!`);
 });

@@ -8,7 +8,11 @@
     line-height: 23px;
 }
 
-p, pre, th, td, li {
+p,
+pre,
+th,
+td,
+li {
     font-size: 14px;
 }
 
@@ -20,7 +24,9 @@ a:visited {
     color: #706F6F;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #231F20;
 }
 
@@ -51,6 +57,7 @@ img {
 .code {
     font-family: Consolas, monospace;
 }
+
 /*****************************************************************/
 
 
@@ -64,6 +71,7 @@ body {
 .container {
     margin: 20px 20px;
 }
+
 /*****************************************************************/
 
 
@@ -84,16 +92,17 @@ div.card .card-img {
     display: block;
 }
 
-div.card > .card-body {
+div.card>.card-body {
     border: 1px solid #E6E7E9;
     padding-left: 10px;
     padding-right: 10px;
     height: 100%;
 }
 
-div.card > .card-footer {
+div.card>.card-footer {
     width: 100%;
 }
+
 /*****************************************************************/
 
 
@@ -104,7 +113,8 @@ div.card > .card-footer {
     border-collapse: collapse;
 }
 
-.table th, .table td {
+.table th,
+.table td {
     text-align: left;
     padding: 5px;
     color: #231F20;
@@ -114,27 +124,32 @@ div.card > .card-footer {
     font-weight: bold;
 }
 
-.table > thead {
+.table>thead {
     background-color: #d9ead3;
     border-top: 1px solid #3AAA35;
     border-bottom: 1px solid #3AAA35;
 }
 
-.table > tbody {
+.table>tbody {
     border-bottom: 1px solid #706F6F;
 }
 
-.table > tbody > tr:nth-child(odd) {
+.table>tbody>tr:nth-child(odd) {
     background-color: white;
 }
 
-.table > tbody > tr:nth-child(even) {
+.table>tbody>tr:nth-child(even) {
     background-color: #E6E7E9;
 }
 
-.table.table-hover > tbody > tr:hover {
+.table.table-hover>tbody>tr:hover {
     background-color: #B6B7B9;
 }
+
+#img {
+    width: 64px;
+}
+
 /*****************************************************************/
 
 
@@ -165,6 +180,7 @@ div.card > .card-footer {
 .nav .nav-button.active {
     color: #231F20;
 }
+
 /*****************************************************************/
 
 
@@ -175,6 +191,7 @@ form .form-group {
     flex-direction: column;
     margin-bottom: 10px;
 }
+
 /*****************************************************************/
 
 
@@ -186,4 +203,5 @@ form .form-group {
         margin: 20px auto;
     }
 }
+
 /*****************************************************************/

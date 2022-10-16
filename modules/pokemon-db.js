@@ -70,9 +70,13 @@ function getAllPokemon() {
 
 // Gets the Poke'mon with the given id. See the JavaScript documentation for the Array find() function for details.
 function getPokemonById(id) {
-    return pokemonData.find(function(pokemon) {
+    return pokemonData.find(function (pokemon) {
         return pokemon.id == id;
     });
+}
+function deletePokemonById(id) {
+    const remainingPokemonId = getAllPokemon().filter(pokemonItem => pokemonItem.id !== id);
+    savePokemonData(remainingPokemonId);
 }
 
 // Gets the Poke'mon at the given array index.
@@ -88,7 +92,7 @@ function addPokemon(pokemon) {
     pokemon = validatePokemon(pokemon);
 
     pokemonData.push(pokemon);
-    pokemonData.sort(function(p1, p2) {
+    pokemonData.sort(function (p1, p2) {
         return p1.id - p2.id;
     });
     savePokemonData(pokemonData);
@@ -107,5 +111,6 @@ module.exports = {
     getPokemonById,
     getPokemonByArrayIndex,
     getTypeData,
-    addPokemon
+    addPokemon,
+    deletePokemonById
 };
